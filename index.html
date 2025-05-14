@@ -1,7 +1,4 @@
-from pathlib import Path
 
-# HTML content for AceMode Portfolio
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,66 +6,60 @@ html_content = """
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AceMode Enterprises Kenya</title>
   <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
-</head>
-    <style>
-        body { margin: 0; font-family: 'Open Sans', sans-serif; color: #333; }
-        .hero { background-color: #E55300; color: white; text-align: center; padding: 60px 20px; }
-        .hero h1 { margin: 0; font-size: 2.5em; }
-        .hero p { font-size: 1.25em; margin: 10px 0; }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h2 { color: #E55300; }
-        .services ul { list-style: none; padding: 0; }
-        .services li { background: #f9f9f9; margin: 10px 0; padding: 15px; border-left: 5px solid #E55300; }
-        .contact { background-color: #A9A9A9; color: white; padding: 40px 20px; text-align: center; }
-        .contact a { color: white; text-decoration: none; display: inline-block; margin: 5px 10px; }
-        .contact form { max-width: 500px; margin: 20px auto; }
-        .contact input, .contact textarea { width: 100%; padding: 10px; margin: 5px 0; border: none; border-radius: 4px; }
-        .contact button { background-color: #E55300; border: none; padding: 15px 30px; color: white; border-radius: 4px; font-size: 1em; cursor: pointer; }
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2em; }
-        }
-    </style>
+  <style>
+    body { margin: 0; font-family: 'Open Sans', sans-serif; color: #333; }
+    .hero { background-color: #E55300; color: white; text-align: center; padding: 60px 20px; }
+    .hero h1 { margin: 0; font-size: 2.5em; }
+    .hero p { font-size: 1.25em; margin: 10px 0; }
+    .hero img { max-width: 200px; margin-bottom: 20px; }
+    .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h2 { color: #E55300; }
+    .services ul { list-style: none; padding: 0; }
+    .services li { background: #f9f9f9; margin: 10px 0; padding: 15px; border-left: 5px solid #E55300; }
+    .contact { background-color: #A9A9A9; color: white; padding: 40px 20px; text-align: center; }
+    .contact a { color: white; text-decoration: none; display: inline-block; margin: 5px 10px; }
+    .contact form { max-width: 500px; margin: 20px auto; }
+    .contact input, .contact textarea { width: 100%; padding: 10px; margin: 5px 0; border: none; border-radius: 4px; }
+    .contact button { background-color: #E55300; border: none; padding: 15px 30px; color: white; border-radius: 4px; font-size: 1em; cursor: pointer; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2em; }
+    }
+  </style>
 </head>
 <body>
-    <section class="hero">
-        <h1>AceMode Enterprises Kenya</h1>
-        <p>Your Partner in Tailored Solutions for Professional Growth and Market Excellence.</p>
-        <a href="#contact"><button>Get in Touch</button></a>
+  <section class="hero">
+    <img src="acemode-logo.png" alt="AceMode Logo">
+    <h1>AceMode Enterprises Kenya</h1>
+    <p>Your Partner in Tailored Solutions for Professional Growth and Market Excellence.</p>
+    <a href="#contact"><button>Get in Touch</button></a>
+  </section>
+  <div class="container">
+    <section class="about">
+      <h2>About AceMode</h2>
+      <p>Since 2018, AceMode Enterprises Kenya has empowered professionals and businesses with personalized, results-driven support. From career development to admin support, we’re dedicated to helping you grow with elegance, strategy, and clarity.</p>
     </section>
-    <div class="container">
-        <section class="about">
-            <h2>About AceMode</h2>
-            <p>Since 2018, AceMode Enterprises Kenya has empowered professionals and businesses with personalized, results-driven support. From career development to admin support, we’re dedicated to helping you grow with elegance, strategy, and clarity.</p>
-        </section>
-        <section class="services">
-            <h2>What We Offer</h2>
-            <ul>
-                <li><strong>CV, Resume & Cover Letter Writing</strong> – Stand out with documents tailored to your career goals.</li>
-                <li><strong>Resume Redesigns (EU Format included)</strong> – Clean, modern layouts optimized for recruiters and ATS.</li>
-                <li><strong>LinkedIn Profile Revamp & Management</strong> – Craft a profile that builds credibility and attracts opportunities.</li>
-                <li><strong>Company Profile Writing</strong> – Professionally written overviews for branding, marketing, or partnerships.</li>
-                <li><strong>Transcription Services</strong> – Accurate, timely, and confidential audio-to-text services.</li>
-                <li><strong>Errand Support Services</strong> – Let us handle the logistics so you can focus on what matters most.</li>
-            </ul>
-        </section>
-    </div>
-    <section class="contact" id="contact">
-        <h2>Let’s Work Together</h2>
-        <p>Email: <a href="mailto:acemode.ent@outlook.com">acemode.ent@outlook.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/254729855092">+254729855092</a></p>
-        <form action="mailto:acemode.ent@outlook.com" method="post" enctype="text/plain">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="Message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section class="services">
+      <h2>What We Offer</h2>
+      <ul>
+        <li><strong>CV, Resume & Cover Letter Writing</strong> – Stand out with documents tailored to your career goals.</li>
+        <li><strong>Resume Redesigns (EU Format included)</strong> – Clean, modern layouts optimized for recruiters and ATS.</li>
+        <li><strong>LinkedIn Profile Revamp & Management</strong> – Craft a profile that builds credibility and attracts opportunities.</li>
+        <li><strong>Company Profile Writing</strong> – Professionally written overviews for branding, marketing, or partnerships.</li>
+        <li><strong>Transcription Services</strong> – Accurate, timely, and confidential audio-to-text services.</li>
+        <li><strong>Errand Support Services</strong> – Let us handle the logistics so you can focus on what matters most.</li>
+      </ul>
     </section>
+  </div>
+  <section class="contact" id="contact">
+    <h2>Let’s Work Together</h2>
+    <p>Email: <a href="mailto:acemode.ent@outlook.com">acemode.ent@outlook.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/254729855092">+254729855092</a></p>
+    <form action="mailto:acemode.ent@outlook.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 </body>
 </html>
-"""
-
-# Write the HTML file
-file_path = Path("/mnt/data/AceMode_Portfolio.html")
-file_path.write_text(html_content)
-
-file_path
