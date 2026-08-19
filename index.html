@@ -91,9 +91,8 @@
     display:flex;align-items:center;justify-content:space-between;
     padding-top:10px;padding-bottom:10px;gap:20px;
   }
-  .brandmark{display:block;text-decoration:none;}
-  .brandmark img{height:58px;width:auto;}
-  @media(min-width:700px){ .brandmark img{height:70px;} }
+  .brandmark{display:block;text-decoration:none;color:var(--ink);}
+  .brandmark .word{font-family:var(--display);font-size:1.2rem;font-weight:500;letter-spacing:-0.01em;}
   nav.top-links{display:flex;align-items:center;gap:28px;}
   nav.top-links a.nav-item{
     font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;
@@ -202,7 +201,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brandmark" href="#top">
-      <img src="acemode-logo.png" alt="AceMode Enterprises Kenya">
+      <span class="word">AceMode</span>
     </a>
     <nav class="top-links">
       <a class="nav-item" href="#brief">About</a>
