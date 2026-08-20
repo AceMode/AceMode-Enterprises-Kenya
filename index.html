@@ -7,7 +7,7 @@
 <meta name="description" content="CV, resume and cover letter writing, LinkedIn profiles, bookkeeping, company profiles, office support and transcription in Kenya since 2018.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://acemode.github.io/AceMode-Enterprises-Kenya/">
-<meta name="theme-color" content="#F2F1EF">
+<meta name="theme-color" content="#111111">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AceMode Enterprises Kenya">
@@ -43,195 +43,223 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --bg:#F2F1EF;
-    --bg-panel:#EAE7E1;
-    --bg-card:#FFFFFF;
-    --ink:#1E1E1E;
-    --gray:#A9A9A9;
-    --gray-deep:#5C5C5C;
-    --orange:#E55300;
-    --orange-deep:#B84400;
-    --orange-hover:#FF6B1A;
-    --line: rgba(30,30,30,0.14);
-    --line-soft: rgba(30,30,30,0.08);
-    --display:'Jost', -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --body:'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --mono:'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --max:1140px;
+:root{
+  --ink:#111111;
+  --ink-2:#1b1b1b;
+  --muted:#707070;
+  --muted-light:#9b9b9b;
+  --paper:#f6f4f0;
+  --paper-2:#ebe8e2;
+  --white:#ffffff;
+  --orange:#d95000;
+  --orange-2:#ff6b1a;
+  --orange-dark:#bd4200;
+  --line:rgba(17,17,17,.12);
+  --line-light:rgba(255,255,255,.14);
+  --display:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --max:1140px;
+  --radius:18px;
+  --radius-sm:10px;
+  --shadow:0 24px 70px rgba(0,0,0,.11);
+  --shadow-sm:0 10px 30px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.035em}
+h1{font-size:clamp(1.625rem,3.4vw,2.35rem);line-height:1.15;font-weight:700;margin-bottom:24px}
+h2{font-size:clamp(1.25rem,2.2vw,1.625rem);line-height:1.2;font-weight:700;margin-bottom:16px}
+p{margin-bottom:0}
+.wrap{width:min(var(--max),calc(100% - 36px));margin:0 auto}
+:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+::selection{background:var(--orange);color:#fff}
 
-    /* type scale: deliberate steps, used everywhere instead of ad-hoc sizes */
-    --fs-2xs: 0.6875rem;
-    --fs-xs: 0.75rem;
-    --fs-sm: 0.9375rem;
-    --fs-base: 1rem;
-    --fs-md: 1.0625rem;
-    --fs-lg: 1.25rem;
-    --fs-h2: clamp(1.25rem, 3.5vw, 1.875rem);
-    --fs-h1: clamp(1.75rem, 5vw, 2.75rem);
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(247,245,241,.86);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(17,17,17,.08);
+}
+.header-inner{height:86px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brandmark img{height:54px;width:auto}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a:not(.btn){
+  text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#555;transition:color .2s ease
+}
+.nav a:not(.btn):hover{color:var(--orange)}
+.btn{vertical-align:middle;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:48px;padding:0 22px;border-radius:999px;text-decoration:none;
+  border:1px solid transparent;font-size:12px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  transition:transform .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease,border-color .2s ease
+}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 26px rgba(229,83,0,.22)}
+.btn-primary:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:0 14px 32px rgba(229,83,0,.28)}
+.btn-outline{background:rgba(255,255,255,.72);color:var(--ink);border-color:rgba(229,83,0,.55)}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange);background:#fff;transform:translateY(-2px)}
+@media(max-width:760px){
+  .header-inner{height:76px}
+  .brandmark img{height:46px}
+  .nav{gap:8px}
+  .nav a:not(.btn){display:none}
+  .btn{min-height:44px;padding:0 16px}
+}
 
-    /* depth */
-    --radius: 6px;
-    --radius-lg: 10px;
-    --shadow-sm: 0 1px 2px rgba(30,30,30,0.06);
-    --shadow-md: 0 1px 2px rgba(30,30,30,0.04), 0 8px 24px -8px rgba(30,30,30,0.12);
-    --shadow-nav: 0 1px 0 rgba(30,30,30,0.06), 0 6px 16px -10px rgba(30,30,30,0.10);
-  }
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:62px 0 64px;background:var(--paper)}
+.hero:before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  right:-180px;top:-190px;background:rgba(229,83,0,.07);pointer-events:none
+}
+.hero-grid{display:block;max-width:900px}
+.eyebrow{
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+  color:var(--orange-dark);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase
+}
+.dashmark{display:inline-flex;flex-direction:column;gap:3px;flex:none}
+.dashmark span{display:block;width:19px;height:2px;background:var(--orange);border-radius:4px}
+.dashmark.sm span{width:14px;height:2px}
+.hero h1 .accent{color:var(--orange)}
+.hero .lede{max-width:760px;color:#606060;font-size:17px;line-height:1.65}
+.hero-ctas{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;width:100%}.hero-ctas .wa-icon{color:#25D366;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}.hero-ctas .wa-icon svg{display:block;stroke-width:2.8}
+@media(max-width:900px){
+  .hero{padding:56px 0 62px}
+}
+@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))}.header-inner{height:70px}.brandmark img{height:42px}.hero{padding:38px 0 46px}.hero .lede{font-size:15.5px}.hero-ctas{gap:10px}.hero-ctas .btn{flex:1;padding:0 10px;min-width:0;font-size:10px}.services{padding:54px 0}.service-card{padding:20px;min-height:0}.service-number{margin:0}.contact{padding:54px 0}.form-wrap{padding:20px}}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--body);
-    font-size:var(--fs-base);
-    line-height:1.58;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%;display:block;}
-  a{color:inherit;}
-  h1,h2{font-family:var(--display);margin:0;color:var(--ink);letter-spacing:-0.02em;line-height:1.12;}
-  h1{font-weight:400;}
-  h2{font-weight:500;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-  :focus-visible{outline:2px solid var(--orange-deep);outline-offset:3px;}
+/* About */
+.brief{background:var(--ink);color:#fff;padding:62px 0}
+.brief-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:54px;align-items:start}
+.brief .eyebrow{color:#ff9a68}
+.brief h2{color:#fff}
+.brief p{color:#c9c9c9;font-size:16.5px;line-height:1.72;max-width:760px}
+.brief .side-label{
+  color:#8f8f8f;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding-top:8px
+}
+@media(max-width:800px){.brief{padding:68px 0}.brief-grid{grid-template-columns:1fr;gap:22px}}
 
-  /* ---------- signature dash mark ---------- */
-  .dashmark{display:inline-flex;flex-direction:column;gap:4px;flex:none;}
-  .dashmark span{display:block;width:16px;height:2px;background:var(--orange);}
-  .dashmark.sm span{width:12px;}
+/* Services */
+.services{padding:68px 0}
+.section-head{display:flex;justify-content:space-between;gap:42px;align-items:end;margin-bottom:34px}
+.section-head .intro{max-width:430px;color:var(--muted);font-size:16px}
+.services h2{max-width:650px}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.service-card{
+  position:relative;background:var(--white);border:1px solid rgba(17,17,17,.09);
+  border-radius:var(--radius);padding:23px 24px 25px;
+  box-shadow:0 4px 18px rgba(17,17,17,.035);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:rgba(229,83,0,.25)}
+.service-number{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+  width:32px;height:32px;border:1px solid rgba(229,83,0,.28);
+  border-radius:8px;background:rgba(229,83,0,.055);
+  font-family:var(--display);font-size:10px;font-weight:800;color:var(--orange);
+  letter-spacing:.08em
+}
+.service-title{
+  display:flex;align-items:center;gap:11px;margin:0 0 11px;
+  font-family:var(--display);font-size:19px;font-weight:700;line-height:1.22;letter-spacing:-.025em
+}
+.service-title .service-number{margin:0}
+.service-title .dashmark{margin-top:5px}
+.service-card .desc{color:#666;font-size:14px;line-height:1.62;max-width:620px}
+@media(max-width:700px){
+  .services{padding:72px 0}
+  .section-head{display:block;margin-bottom:30px}
+  .section-head .intro{margin-top:14px}
+  .service-grid{grid-template-columns:1fr}
+}
 
-  /* ---------- top bar ---------- */
-  .topbar{
-    position:sticky;top:0;z-index:50;
-    background:rgba(242,241,239,0.92);
-    backdrop-filter:blur(6px);
-    box-shadow:var(--shadow-nav);
-  }
-  .topbar .wrap{
-    display:flex;align-items:center;justify-content:space-between;
-    padding-top:10px;padding-bottom:10px;gap:20px;
-  }
-  .brandmark{display:block;text-decoration:none;color:var(--ink);}
-  .brandmark img{height:56px;width:auto;}
-  @media(min-width:700px){ .brandmark img{height:72px;} }
-  nav.top-links{display:flex;align-items:center;gap:28px;}
-  nav.top-links a.nav-item{
-    font-family:var(--mono);font-size:var(--fs-xs);letter-spacing:0.1em;
-    text-decoration:none;color:var(--gray-deep);text-transform:uppercase;
-    display:none;
-  }
-  @media(min-width:700px){ nav.top-links a.nav-item{display:inline;} }
+/* Contact */
+.contact{background:var(--paper-2);padding:64px 0}
+.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:start}
+.contact .lede{color:var(--muted);font-size:17px;max-width:520px}
+.contact-rows{margin-top:26px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.contact-row{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:14px 0;border-bottom:1px solid var(--line);min-width:0
+}
+.contact-row .label{
+  color:#888;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase
+}
+.contact-row .value{
+  font-family:var(--display);font-size:16px;font-weight:600;text-decoration:none;
+  display:inline-flex;align-items:center;gap:9px;text-align:right
+}
+.contact-row .value:hover{color:var(--orange)}
+.wa-icon{color:#25D366;flex:none;font-weight:800;display:inline-flex}.wa-icon svg{stroke-width:2.4}
+.form-heading{
+  color:#777;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  margin:0 0 14px
+}
+.form-wrap{
+  background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:18px;padding:24px;
+  box-shadow:var(--shadow-sm)
+}
+.form-row-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{
+  display:block;margin-bottom:8px;color:#777;font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase
+}
+.field input,.field textarea{
+  width:100%;font-family:var(--body);font-size:15px;color:var(--ink);
+  background:#faf9f7;border:1px solid rgba(17,17,17,.13);border-radius:10px;
+  padding:14px 15px;line-height:1.45;transition:border-color .2s ease,box-shadow .2s ease
+}
+.field input:focus,.field textarea:focus{
+  outline:none;border-color:var(--orange);box-shadow:0 0 0 4px rgba(229,83,0,.1)
+}
+.field textarea{resize:vertical;min-height:130px}
+.form-status{margin:14px 0 0;font-size:14px;min-height:1.3em}
+.form-status.ok{color:#2e7d32}
+.form-status.err{color:#b3261e}
+@media(max-width:850px){
+  .contact{padding:72px 0}
+  .contact-grid{grid-template-columns:1fr;gap:42px}
+}
+@media(max-width:560px){.form-row-two{grid-template-columns:1fr}.form-wrap{padding:22px}.contact-rows{grid-template-columns:1fr;gap:0}.contact-row{align-items:center;flex-direction:row;gap:10px}.contact-row .value{text-align:right;overflow-wrap:anywhere}}
 
-  .btn{
-    font-family:var(--mono);font-size:var(--fs-xs);letter-spacing:0.06em;text-transform:uppercase;
-    padding:12px 22px;border-radius:var(--radius);text-decoration:none;border:none;cursor:pointer;
-    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
-    transition:transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
-  }
-  .btn-primary{background:var(--orange);color:#141414;box-shadow:0 2px 8px rgba(229,83,0,0.28);}
-  .btn-primary:hover{background:var(--orange-hover);transform:translateY(-1px);box-shadow:0 4px 14px rgba(229,83,0,0.34);}
-  .btn-primary:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none;}
-  .btn-outline{background:var(--bg-card);color:var(--ink);border:1px solid var(--line);}
-  .btn-outline:hover{border-color:var(--orange-deep);color:var(--orange-deep);background:rgba(229,83,0,0.05);}
+/* Footer */
+footer{background:var(--ink);color:#fff;padding:22px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center}
+footer p{margin:0;color:#999;font-size:11px;letter-spacing:.04em}
+footer p:first-child{color:#d1d1d1}
 
-  
-  /* ---------- hero ---------- */
-  .hero{padding:24px 0 32px;}
-  .hero .wrap{max-width:760px;}
-  @media(min-width:700px){ .hero{padding:44px 0 48px;} }
-  .eyebrow{
-    font-family:var(--mono);font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--orange-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;
-  }
-  .hero h1{font-size:var(--fs-h1);line-height:1.1;}
-  .hero h1 .accent{color:var(--orange);font-weight:500;}
-  .hero p.lede{margin:12px 0 20px;font-size:var(--fs-md);color:var(--gray-deep);max-width:46ch;}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;}
-
-  /* ---------- about / brief ---------- */
-  .brief{background:var(--bg-panel);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:24px 0;}
-  @media(min-width:700px){ .brief{padding:40px 0;} }
-  .brief .inner{max-width:760px;}
-  .brief h2{font-size:var(--fs-h2);margin-bottom:12px;}
-  .brief p{font-size:var(--fs-base);color:var(--gray-deep);max-width:70ch;}
-
-  /* ---------- services ---------- */
-  .services{padding:28px 0;}
-  @media(min-width:700px){ .services{padding:44px 0;} }
-  .services h2{font-size:var(--fs-h2);margin-bottom:8px;}
-  .services .intro{color:var(--gray-deep);font-size:var(--fs-sm);margin-bottom:20px;max-width:60ch;}
-  .list{border-top:1px solid var(--line);list-style:none;margin:0;padding:0;}
-  .row{
-    display:grid;gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--line);
-    transition:background .15s ease;
-  }
-  @media(min-width:760px){ .row{grid-template-columns:64px 1fr;align-items:start;} }
-  .row:hover{background:rgba(30,30,30,0.02);}
-  .row .num{font-family:var(--mono);font-size:var(--fs-2xs);color:var(--gray-deep);letter-spacing:0.04em;padding-top:4px;}
-  .row .head{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
-  .row .title{font-family:var(--display);font-size:var(--fs-lg);font-weight:500;color:var(--ink);}
-  .row .desc{color:var(--gray-deep);font-size:var(--fs-sm);max-width:66ch;}
-
-  /* ---------- contact ---------- */
-  .contact{background:var(--bg-panel);border-top:1px solid var(--line-soft);padding:28px 0 32px;}
-  @media(min-width:700px){ .contact{padding:44px 0 48px;} }
-  .contact .top{max-width:640px;}
-  .contact h2{font-size:var(--fs-h2);}
-  .contact p.lede{color:var(--gray-deep);font-size:var(--fs-md);margin:10px 0 20px;max-width:56ch;}
-  .contact-rows{border-top:1px solid var(--line);max-width:640px;}
-  .contact-row{
-    display:flex;align-items:center;justify-content:space-between;gap:20px;
-    padding:16px 0;border-bottom:1px solid var(--line);
-  }
-  .contact-row .label{font-family:var(--mono);font-size:var(--fs-2xs);letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-deep);}
-  .contact-row .value{font-family:var(--display);font-size:var(--fs-lg);font-weight:400;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:9px;}
-  .contact-row .value:hover{color:var(--orange-deep);}
-  .wa-icon{color:#25D366;flex:none;}
-  .btn span.wa-icon{color:#25D366;}
-
-  .form-heading{
-    font-family:var(--mono);font-size:var(--fs-xs);letter-spacing:0.12em;text-transform:uppercase;
-    color:var(--gray-deep);margin:22px 0 12px;padding-top:18px;border-top:1px solid var(--line);max-width:640px;
-  }
-  .form-wrap{
-    max-width:640px;background:var(--bg-card);border-radius:var(--radius-lg);
-    padding:22px 20px;box-shadow:var(--shadow-md);
-  }
-  @media(min-width:560px){ .form-wrap{padding:26px;} }
-  .form-row-two{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:14px;}
-  @media(min-width:560px){ .form-row-two{grid-template-columns:1fr 1fr;} }
-  .field{margin-bottom:14px;}
-  .field label{display:block;font-family:var(--mono);font-size:var(--fs-2xs);letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-deep);margin-bottom:8px;}
-  .field input,.field textarea{
-    width:100%;font-family:var(--body);font-size:var(--fs-base);color:var(--ink);
-    background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
-    padding:13px 14px;line-height:1.4;
-  }
-  .field input:focus,.field textarea:focus{outline:2px solid var(--orange-deep);outline-offset:1px;border-color:var(--orange-deep);}
-  .field textarea{resize:vertical;min-height:100px;}
-  .form-status{margin-top:16px;font-family:var(--mono);font-size:var(--fs-sm);min-height:1.3em;}
-  .form-status.ok{color:#2E7D32;}
-  .form-status.err{color:#B3261E;}
-
-  footer{background:var(--bg);padding:16px 0;border-top:1px solid var(--line);}
-  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;}
-  footer p{margin:0;font-family:var(--mono);font-size:var(--fs-2xs);color:var(--gray-deep);}
+/* Small motion, reduced-motion safe */
+@media(prefers-reduced-motion: no-preference){
+  .hero-copy{animation:rise .7s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
 </style>
 </head>
-<body>
 
-<header class="topbar">
-  <div class="wrap">
-    <a class="brandmark" href="#top">
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brandmark" href="#top" aria-label="AceMode Enterprises Kenya">
       <img src="acemode-logo.png" alt="AceMode Enterprises Kenya">
     </a>
-    <nav class="top-links">
-      <a class="nav-item" href="#brief">About</a>
-      <a class="nav-item" href="#services">Services</a>
+    <nav class="nav">
+      <a href="#brief">About</a>
+      <a href="#services">Services</a>
       <a class="btn btn-primary" href="#contact">Contact Us</a>
     </nav>
   </div>
@@ -239,102 +267,104 @@
 
 <main id="top">
 
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">
-          <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
-          Professional Services · Est. 2018 · Kenya
-        </p>
-        <h1>Your partner in tailored solutions for <span class="accent">professional growth</span> and market excellence.</h1>
-        <p class="lede">AceMode Enterprises Kenya helps professionals and businesses look credible on paper and run smoothly behind the scenes, covering everything from career documents and business profiles to bookkeeping, office support, and transcription.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact">Get in Touch</a>
-          <a class="btn btn-outline" href="https://wa.me/254729855092" target="_blank" rel="noopener">Message on WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="brief" id="brief">
-    <div class="wrap">
-      <div class="inner">
-        <p class="eyebrow">
-          <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
-          What We Do
-        </p>
-        <h2>Corporate-grade precision, told with care.</h2>
-        <p>Since 2018, AceMode Enterprises Kenya has helped professionals, start-ups, and established organisations grow through standout branding, efficient operations, and strategic business support. We combine corporate-grade precision with creative storytelling and digital-savvy execution, applied to every document, profile, and process we handle.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="services">
-    <div class="wrap">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
       <p class="eyebrow">
         <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
-        What We Offer
+        Professional Services · Est. 2018 · Kenya
       </p>
-      <h2>Six services, one standard of craft.</h2>
-      <p class="intro">Every engagement, whether it is a single CV or ongoing bookkeeping, is handled with the same attention to detail.</p>
-
-      <ol class="list">
-        <li class="row">
-          <div class="num">01</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">Office Support Services</span></div>
-            <p class="desc">Streamlined administrative support, including errands, scheduling, document handling, back-office operations, and day-to-day office management to keep your business running efficiently.</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="num">02</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">Bookkeeping, Accounting &amp; Business Data Analysis</span></div>
-            <p class="desc">Dependable bookkeeping, invoice tracking, and financial record management, paired with data-driven insight for start-ups, professionals, and growing enterprises.</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="num">03</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">CV, Resume &amp; Cover Letter Writing</span></div>
-            <p class="desc">Professionally written documents that capture your strengths, achievements, and career goals, crafted to impress recruiters and hiring managers.</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="num">04</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">LinkedIn Profile Revamp &amp; Management</span></div>
-            <p class="desc">A compelling headline, summary, and optimised content that improves your visibility, connections, and opportunities.</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="num">05</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">Company Profile Writing, Design &amp; Revamp</span></div>
-            <p class="desc">Professionally crafted profiles that communicate your brand story, values, and service offering to clients, partners, and investors.</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="num">06</div>
-          <div>
-            <div class="head"><span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span><span class="title">Transcription Services</span></div>
-            <p class="desc">High-quality, confidential transcription for interviews, research, meetings, and digital content, delivered with precision and speed.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="top">
-        <p class="eyebrow">
-          <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
-          Let Us Work Together
-        </p>
-        <h2>Ready to present your best work?</h2>
-        <p class="lede">Send a message below, or reach us directly by email or WhatsApp.</p>
+      <h1>Your partner in tailored solutions for <span class="accent">professional growth</span> and market excellence.</h1>
+      <p class="lede">AceMode Enterprises Kenya helps professionals and businesses look credible on paper and run smoothly behind the scenes, covering everything from career documents and business profiles to bookkeeping, office support, and transcription.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Get in Touch</a>
+        <a class="btn btn-outline" href="https://wa.me/254729855092" target="_blank" rel="noopener">
+  <span class="wa-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a8.5 8.5 0 0 0-7.35 12.75L3 21l5.4-1.62A8.5 8.5 0 1 0 12 3Z"/>
+      <path d="M8.6 8.75c.15-.45.5-.85.95-.85.28 0 .48.1.58.33l.58 1.3c.1.2.05.44-.1.6l-.48.52c-.15.16-.15.4-.05.6.4.72 1.1 1.44 1.82 1.83.2.1.44.1.6-.05l.5-.48c.16-.15.4-.2.6-.1l1.3.58c.23.1.33.3.33.58 0 .45-.4.8-.85.95-.58.15-1.25.05-2.25-.43-1.3-.62-2.44-1.78-3.07-3.06-.48-1-.58-1.68-.43-2.26Z" fill="currentColor" stroke="none"/>
+    </svg>
+  </span>
+  Contact Us on WhatsApp
+</a>
       </div>
+    </div>
+
+
+  </div>
+</section>
+
+<section class="brief" id="brief">
+  <div class="wrap brief-grid">
+    <div class="side-label">
+      <p class="eyebrow">
+        <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
+        What We Do
+      </p>
+    </div>
+    <div>
+      <h2>Corporate-grade precision, told with care.</h2>
+      <p>Since 2018, AceMode Enterprises Kenya has helped professionals, start-ups, and established organisations grow through standout branding, efficient operations, and strategic business support. We combine corporate-grade precision with creative storytelling and digital-savvy execution, applied to every document, profile, and process we handle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">
+          What We Offer
+        </p>
+        <h2>Professional services designed for growth.</h2>
+      </div>
+      <p class="intro">Practical business support, career branding and operational services delivered with one consistent standard of quality.</p>
+    </div>
+
+    <ol class="service-grid" style="list-style:none;margin:0;padding:0">
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">01</span><span>Office Support Services</span></div>
+        <p class="desc">Streamlined administrative support, including errands, scheduling, document handling, back-office operations, and day-to-day office management to keep your business running efficiently.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">02</span><span>Bookkeeping, Accounting &amp; Business Data Analysis</span></div>
+        <p class="desc">Dependable bookkeeping, invoice tracking, and financial record management, paired with data-driven insight for start-ups, professionals, and growing enterprises.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">03</span><span>CV, Resume &amp; Cover Letter Writing</span></div>
+        <p class="desc">Professionally written documents that capture your strengths, achievements, and career goals, crafted to impress recruiters and hiring managers.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">04</span><span>LinkedIn Profile Revamp &amp; Management</span></div>
+        <p class="desc">A compelling headline, summary, and optimised content that improves your visibility, connections, and opportunities.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">05</span><span>Company Profile Writing, Design &amp; Revamp</span></div>
+        <p class="desc">Professionally crafted profiles that communicate your brand story, values, and service offering to clients, partners, and investors.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">06</span><span>Transcription Services</span></div>
+        <p class="desc">High-quality, confidential transcription for interviews, research, meetings, and digital content, delivered with precision and speed.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">
+        <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
+        Let Us Work Together
+      </p>
+      <h2>Ready to present your best work?</h2>
+      <p class="lede">Send a message below, or reach us directly by email or WhatsApp.</p>
+
       <div class="contact-rows">
         <div class="contact-row">
           <span class="label">Email</span>
@@ -353,7 +383,9 @@
           </a>
         </div>
       </div>
+    </div>
 
+    <div>
       <p class="form-heading">Or send a message directly</p>
       <div class="form-wrap">
         <form id="contact-form" action="https://formspree.io/f/xjybpzjg" method="POST">
@@ -381,7 +413,8 @@
         </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
@@ -393,42 +426,41 @@
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('cf-status');
-  const submitBtn = document.getElementById('cf-submit');
+const form = document.getElementById('contact-form');
+const status = document.getElementById('cf-status');
+const submitBtn = document.getElementById('cf-submit');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    status.textContent = '';
-    status.className = 'form-status';
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  status.textContent = '';
+  status.className = 'form-status';
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
 
-      if (response.ok) {
-        form.reset();
-        status.textContent = 'Message sent. We will get back to you soon.';
-        status.classList.add('ok');
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (err) {
-      status.textContent = 'Something went wrong. Please email us directly at acemode.ent@outlook.com.';
-      status.classList.add('err');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+    if (response.ok) {
+      form.reset();
+      status.textContent = 'Message sent. We will get back to you soon.';
+      status.classList.add('ok');
+    } else {
+      throw new Error('Submission failed');
     }
-  });
+  } catch (err) {
+    status.textContent = 'Something went wrong. Please email us directly at acemode.ent@outlook.com.';
+    status.classList.add('err');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
+});
 </script>
-
 </body>
 </html>
