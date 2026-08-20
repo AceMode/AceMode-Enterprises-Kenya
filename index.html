@@ -36,7 +36,7 @@
   "image": "https://acemode.github.io/AceMode-Enterprises-Kenya/acemode-logo.png",
   "areaServed": "KE",
   "foundingDate": "2018",
-  "description": "Professional services company in Kenya offering CV and resume writing, LinkedIn profile revamps, bookkeeping, company profile writing, office support and transcription services."
+  "description": "Professional services company in Kenya offering CV and resume writing, LinkedIn profile revamps, virtual executive assistance, bookkeeping, company profile writing, office support, transcription, and business operations support services."
 }
 </script>
 
@@ -92,8 +92,8 @@ p{margin-bottom:0}
   backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(17,17,17,.08);
 }
-.header-inner{height:104px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brandmark img{height:72px;width:auto}
+.header-inner{height:88px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brandmark img{height:60px;width:auto}
 .nav{display:flex;align-items:center;gap:34px}
 .nav a:not(.btn){
   text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.08em;
@@ -109,7 +109,7 @@ p{margin-bottom:0}
 }
 .btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 26px rgba(229,83,0,.22)}
 .btn-primary:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:0 14px 32px rgba(229,83,0,.28)}
-.btn-outline{background:rgba(255,255,255,.72);color:var(--ink);border-color:rgba(229,83,0,.55)}
+.btn-outline{background:rgba(255,255,255,.72);color:var(--ink);border:2px solid var(--orange);}
 .btn-outline:hover{border-color:var(--orange);color:var(--orange);background:#fff;transform:translateY(-2px)}
 @media(max-width:760px){
   .header-inner{height:88px}
@@ -120,7 +120,7 @@ p{margin-bottom:0}
 }
 
 /* Hero */
-.hero{position:relative;overflow:hidden;padding:62px 0 64px;background:var(--paper)}
+.hero{position:relative;overflow:hidden;padding:52px 0 54px;background:var(--paper)}
 .hero:before{
   content:"";position:absolute;width:520px;height:520px;border-radius:50%;
   right:-180px;top:-190px;background:rgba(229,83,0,.07);pointer-events:none
@@ -135,14 +135,14 @@ p{margin-bottom:0}
 .dashmark.sm span{width:14px;height:2px}
 .hero h1 .accent{color:var(--orange)}
 .hero .lede{max-width:760px;color:#606060;font-size:17px;line-height:1.65}
-.hero-ctas{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;width:100%}.hero-ctas .wa-icon{color:#25D366;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}.hero-ctas .wa-icon svg{display:block;stroke-width:2.8}
+.hero-ctas{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;width:100%}.hero-ctas .wa-icon{color:#25D366;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}.hero-ctas .wa-icon svg{display:block;stroke-width:3.2}.hero-ctas .wa-icon{font-weight:900}
 @media(max-width:900px){
   .hero{padding:56px 0 62px}
 }
-@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))}.hero{padding:38px 0 46px}.hero .lede{font-size:15.5px}.hero-ctas{gap:10px}.hero-ctas .btn{flex:1;padding:0 10px;min-width:0;font-size:10px}.services{padding:44px 0}.service-card{padding:20px;min-height:0}.service-number{margin:0}.contact{padding:44px 0}.form-wrap{padding:20px}}
+@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))}.hero{padding:38px 0 46px}.hero .lede{font-size:15.5px}.hero-ctas{gap:10px}.hero-ctas .btn{flex:1;padding:0 10px;min-width:0;font-size:10px}.services{padding:42px 0}.service-card{padding:19px;min-height:0}.service-number{margin:0}.contact{padding:42px 0}.form-wrap{padding:20px}}
 
 /* About */
-.brief{background:var(--ink);color:#fff;padding:62px 0}
+.brief{background:var(--ink);color:#fff;padding:52px 0}
 .brief-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:54px;align-items:start}
 .brief .eyebrow{color:#ff9a68}
 .brief h2{color:#fff}
@@ -154,14 +154,14 @@ p{margin-bottom:0}
 @media(max-width:800px){.brief{padding:40px 0}.brief-grid{grid-template-columns:1fr;gap:22px}}
 
 /* Services */
-.services{padding:68px 0}
-.section-head{display:flex;justify-content:space-between;gap:42px;align-items:end;margin-bottom:34px}
+.services{padding:58px 0}
+.section-head{display:flex;justify-content:space-between;gap:42px;align-items:end;margin-bottom:28px}
 .section-head .intro{max-width:430px;color:var(--muted);font-size:16px}
 .services h2{max-width:650px}
-.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:14px}
 .service-card{
-  position:relative;background:var(--white);border:1px solid rgba(17,17,17,.09);
-  border-radius:var(--radius);padding:23px 24px 25px;
+  height:100%;position:relative;background:var(--white);border:1px solid rgba(17,17,17,.09);
+  border-radius:var(--radius);padding:22px 23px 23px;
   box-shadow:0 4px 18px rgba(17,17,17,.035);
   transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
 }
@@ -175,7 +175,7 @@ p{margin-bottom:0}
 }
 .service-title{
   display:flex;align-items:center;gap:11px;margin:0 0 11px;
-  font-family:var(--display);font-size:19px;font-weight:700;line-height:1.22;letter-spacing:-.025em
+  font-family:var(--display);font-size:18px;font-weight:700;line-height:1.24;letter-spacing:-.025em
 }
 .service-title .service-number{margin:0}
 .service-title .dashmark{margin-top:5px}
@@ -184,27 +184,27 @@ p{margin-bottom:0}
   .services{padding:44px 0}
   .section-head{display:block;margin-bottom:30px}
   .section-head .intro{margin-top:14px}
-  .service-grid{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr;grid-auto-rows:auto}
 }
 
 /* Contact */
-.contact{background:var(--paper-2);padding:64px 0}
-.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:start}
+.contact{background:var(--paper-2);padding:54px 0}
+.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:start}
 .contact .lede{color:var(--muted);font-size:17px;max-width:520px}
-.contact-rows{margin-top:26px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.contact-rows{margin-top:22px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr;gap:0}
 .contact-row{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  display:flex;align-items:center;justify-content:flex-start;gap:18px;
   padding:14px 0;border-bottom:1px solid var(--line);min-width:0
 }
 .contact-row .label{
-  color:#888;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase
+  flex:0 0 82px;color:#888;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase
 }
 .contact-row .value{
-  font-family:var(--display);font-size:16px;font-weight:600;text-decoration:none;
+  flex:1;min-width:0;font-family:var(--display);font-size:16px;font-weight:600;text-decoration:none;
   display:inline-flex;align-items:center;gap:9px;text-align:right
 }
 .contact-row .value:hover{color:var(--orange)}
-.wa-icon{color:#25D366;flex:none;font-weight:800;display:inline-flex}.wa-icon svg{stroke-width:2.4}
+.wa-icon{color:#25D366;flex:none;font-weight:900;display:inline-flex;align-items:center}.wa-icon svg{stroke-width:3}
 .form-heading{
   color:#777;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
   margin:0 0 14px
@@ -232,10 +232,10 @@ p{margin-bottom:0}
 .form-status.ok{color:#2e7d32}
 .form-status.err{color:#b3261e}
 @media(max-width:850px){
-  .contact{padding:44px 0}
+  .contact{padding:42px 0}
   .contact-grid{grid-template-columns:1fr;gap:42px}
 }
-@media(max-width:560px){.form-row-two{grid-template-columns:1fr}.form-wrap{padding:22px}.contact-rows{grid-template-columns:1fr;gap:0}.contact-row{align-items:center;flex-direction:row;gap:10px}.contact-row .value{text-align:right;overflow-wrap:anywhere}}
+@media(max-width:560px){.form-row-two{grid-template-columns:1fr}.form-wrap{padding:22px}.contact-rows{grid-template-columns:1fr;gap:0}.contact-row{align-items:center;flex-direction:row;gap:10px}.contact-row .label{flex-basis:74px}.contact-row .value{text-align:right;overflow-wrap:anywhere}}
 
 /* Footer */
 footer{background:var(--ink);color:#fff;padding:22px 0}
@@ -328,28 +328,38 @@ footer p:first-child{color:#d1d1d1}
       </li>
 
       <li class="service-card">
-        <div class="service-title"><span class="service-number">02</span><span>Bookkeeping, Accounting &amp; Business Data Analysis</span></div>
+        <div class="service-title"><span class="service-number">02</span><span>Virtual Executive Assistance</span></div>
+        <p class="desc">Reliable day-to-day support for busy professionals and business owners, from organising schedules and documents to keeping important tasks moving without the usual hassle.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">03</span><span>Bookkeeping, Accounting &amp; Business Data Analysis</span></div>
         <p class="desc">Dependable bookkeeping, invoice tracking, and financial record management, paired with data-driven insight for start-ups, professionals, and growing enterprises.</p>
       </li>
 
       <li class="service-card">
-        <div class="service-title"><span class="service-number">03</span><span>CV, Resume &amp; Cover Letter Writing</span></div>
+        <div class="service-title"><span class="service-number">04</span><span>CV, Resume &amp; Cover Letter Writing</span></div>
         <p class="desc">Professionally written documents that capture your strengths, achievements, and career goals, crafted to impress recruiters and hiring managers.</p>
       </li>
 
       <li class="service-card">
-        <div class="service-title"><span class="service-number">04</span><span>LinkedIn Revamp &amp; Management</span></div>
+        <div class="service-title"><span class="service-number">05</span><span>LinkedIn Revamp &amp; Management</span></div>
         <p class="desc">A compelling headline, summary, and optimised content that improves your visibility, connections, and opportunities.</p>
       </li>
 
       <li class="service-card">
-        <div class="service-title"><span class="service-number">05</span><span>Company Profile, Design &amp; Revamp</span></div>
+        <div class="service-title"><span class="service-number">06</span><span>Company Profile, Design &amp; Revamp</span></div>
         <p class="desc">Professionally crafted profiles that communicate your brand story, values, and service offering to clients, partners, and investors.</p>
       </li>
 
       <li class="service-card">
-        <div class="service-title"><span class="service-number">06</span><span>Transcription Services</span></div>
+        <div class="service-title"><span class="service-number">07</span><span>Transcription Services</span></div>
         <p class="desc">High-quality, confidential transcription for interviews, research, meetings, and digital content, delivered with precision and speed.</p>
+      </li>
+
+      <li class="service-card">
+        <div class="service-title"><span class="service-number">08</span><span>Business Growth &amp; Operations Support</span></div>
+        <p class="desc">Practical help with improving day-to-day operations, strengthening sales, managing teams, and finding simple ways to make the business work better.</p>
       </li>
     </ol>
   </div>
