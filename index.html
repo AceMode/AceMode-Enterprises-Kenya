@@ -51,10 +51,11 @@
   --ink-2:#1b1b1b;
   --muted:#707070;
   --muted-light:#9b9b9b;
+  --brand-gray:#a9a9a9;
   --paper:#f6f4f0;
   --paper-2:#ebe8e2;
   --white:#ffffff;
-  --orange:#d95000;
+  --orange:#e55300;
   --orange-2:#ff6b1a;
   --orange-dark:#bd4200;
   --line:rgba(17,17,17,.12);
@@ -120,24 +121,49 @@ p{margin-bottom:0}
 }
 
 /* Hero */
-.hero{position:relative;overflow:hidden;padding:52px 0 54px;background:var(--paper)}
-.hero:before{
-  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
-  right:-180px;top:-190px;background:rgba(229,83,0,.07);pointer-events:none
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 54px;background:var(--paper)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:-190px;background:rgba(229,83,0,.07);pointer-events:none}
+.hero-grid{position:relative;max-width:1140px}
+.hero-banner{
+  position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  min-height:260px;overflow:hidden;border:1px solid rgba(17,17,17,.08);
+  border-radius:22px;background:linear-gradient(112deg,#eeece7 0%,#fbfaf8 55%,#fff 100%);
+  box-shadow:0 16px 42px rgba(17,17,17,.07)
 }
-.hero-grid{display:block;max-width:900px}
-.eyebrow{
-  display:flex;align-items:center;gap:12px;margin-bottom:20px;
-  color:var(--orange-dark);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase
-}
+.hero-cityscape{align-self:stretch;display:flex;align-items:end;min-width:0;padding:12px 0 0 10px;background:linear-gradient(145deg,rgba(169,169,169,.08),rgba(229,83,0,.035))}
+.hero-cityscape svg{display:block;width:100%;height:auto;max-height:250px}
+.hero-brand{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 34px 24px;text-align:center}
+.hero-logo{width:min(100%,390px);height:auto;max-height:145px;object-fit:contain}
+.hero-slogan{display:flex;align-items:center;justify-content:center;gap:12px;margin:12px 0 15px;font-family:var(--display);font-size:clamp(13px,1.65vw,19px);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.hero-slogan span:nth-of-type(1),.hero-slogan span:nth-of-type(3){color:var(--ink)}
+.hero-slogan span:nth-of-type(2){color:var(--orange)}
+.hero-slogan i{font-style:normal;color:var(--brand-gray);font-weight:500}
+.hero-banner-contact{display:inline-flex;align-items:center;justify-content:center;gap:9px;color:#4d4d4d;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.035em}
+.hero-banner-contact:hover{color:var(--orange)}
+.hero-banner-contact .wa-mark{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;background:#25D366;color:#fff;flex:none}
+.hero-banner-contact .wa-mark svg{display:block;width:15px;height:15px;fill:currentColor}
+.hero-copy{max-width:900px;margin:36px auto 0}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px;color:var(--orange-dark);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
 .dashmark{display:inline-flex;flex-direction:column;gap:3px;flex:none}
 .dashmark span{display:block;width:19px;height:2px;background:var(--orange);border-radius:4px}
 .dashmark.sm span{width:14px;height:2px}
 .hero h1 .accent{color:var(--orange)}
 .hero .lede{max-width:760px;color:#606060;font-size:17px;line-height:1.65}
-.hero-ctas{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;width:100%}.hero-ctas .wa-icon{color:#25D366;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}.hero-ctas .wa-icon svg{display:block;stroke-width:3.2}.hero-ctas .wa-icon{font-weight:900}
-@media(max-width:900px){
-  .hero{padding:56px 0 62px}
+.hero-ctas{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:14px;margin-top:24px;width:100%}
+.hero-ctas .wa-icon{color:#25D366;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
+.hero-ctas .wa-icon svg{display:block;stroke-width:3.2}
+@media(max-width:900px){.hero{padding:30px 0 48px}.hero-banner{min-height:230px}.hero-brand{padding:22px}.hero-cityscape svg{max-height:220px}}
+@media(max-width:600px){
+  .hero{padding:22px 0 42px}
+  .hero-banner{grid-template-columns:1fr;min-height:0;border-radius:16px}
+  .hero-cityscape{height:132px;padding:5px 8px 0}
+  .hero-cityscape svg{height:132px;max-height:132px;width:100%}
+  .hero-brand{padding:14px 16px 20px}
+  .hero-logo{width:min(100%,300px);max-height:110px}
+  .hero-slogan{gap:7px;margin:7px 0 12px;font-size:12px;letter-spacing:.08em}
+  .hero-banner-contact{font-size:13px}
+  .hero-copy{margin-top:28px}
 }
 @media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))}.hero{padding:38px 0 46px}.hero .lede{font-size:15.5px}.hero-ctas{gap:10px}.hero-ctas .btn{flex:1;padding:0 10px;min-width:0;font-size:10px}.services{padding:42px 0}.service-card{padding:19px;min-height:0}.service-number{margin:0}.contact{padding:42px 0}.form-wrap{padding:20px}}
 
@@ -269,6 +295,63 @@ footer p:first-child{color:#d1d1d1}
 
 <section class="hero">
   <div class="wrap hero-grid">
+    <div class="hero-banner" aria-label="AceMode Enterprises Kenya: Innovate, Elevate, Dominate">
+      <div class="hero-cityscape" aria-hidden="true">
+        <svg viewBox="0 0 720 300" role="img" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="cityFade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#a9a9a9" stop-opacity=".68"/>
+              <stop offset="1" stop-color="#777777" stop-opacity=".94"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 264H720" stroke="#e55300" stroke-width="3" opacity=".75"/>
+          <g fill="url(#cityFade)">
+            <path d="M0 264V173h38v-22h13v22h29v91z"/>
+            <path d="M84 264V119h50v145z"/>
+            <path d="M140 264V153h34v-35h15v35h31v111z"/>
+            <path d="M228 264V91h56v173z"/>
+            <path d="M291 264V139h43v-27h17v27h29v125z"/>
+            <path d="M393 264V66h61v198z"/>
+            <path d="M462 264V130h35v-21h16v21h30v134z"/>
+            <path d="M552 264V102h52v162z"/>
+            <path d="M611 264V158h37v-30h14v30h44v106z"/>
+          </g>
+          <g fill="#f6f4f0" opacity=".78">
+            <path d="M94 139h8v12h-8zm17 0h8v12h-8zm-17 24h8v12h-8zm17 0h8v12h-8zm-17 24h8v12h-8zm17 0h8v12h-8z"/>
+            <path d="M240 110h9v12h-9zm20 0h9v12h-9zm-20 24h9v12h-9zm20 0h9v12h-9zm-20 24h9v12h-9zm20 0h9v12h-9zm-20 24h9v12h-9zm20 0h9v12h-9z"/>
+            <path d="M406 86h10v13h-10zm23 0h10v13h-10zm-23 26h10v13h-10zm23 0h10v13h-10zm-23 26h10v13h-10zm23 0h10v13h-10zm-23 26h10v13h-10zm23 0h10v13h-10z"/>
+            <path d="M565 122h9v12h-9zm20 0h9v12h-9zm-20 24h9v12h-9zm20 0h9v12h-9zm-20 24h9v12h-9zm20 0h9v12h-9z"/>
+          </g>
+          <g>
+            <path d="M338 264V82" stroke="#e55300" stroke-width="3" opacity=".8"/>
+            <path d="M323 82h30" stroke="#e55300" stroke-width="3" stroke-linecap="round"/>
+            <path d="M338 82c-14 0-25 10-25 24v4h50v-4c0-14-11-24-25-24Z" fill="#a9a9a9"/>
+            <ellipse cx="338" cy="111" rx="25" ry="7" fill="#777"/>
+            <path d="M313 119h50v145h-50z" fill="#999"/>
+            <path d="M324 132v105m14-105v105m14-105v105" stroke="#f6f4f0" stroke-width="4" opacity=".75"/>
+            <path d="M308 119h60" stroke="#e55300" stroke-width="3"/>
+          </g>
+          <g fill="#e55300" opacity=".9">
+            <rect x="30" y="202" width="5" height="5" rx="1"/><rect x="30" y="218" width="5" height="5" rx="1"/>
+            <rect x="178" y="175" width="5" height="5" rx="1"/><rect x="178" y="191" width="5" height="5" rx="1"/>
+            <rect x="500" y="153" width="5" height="5" rx="1"/><rect x="500" y="169" width="5" height="5" rx="1"/>
+            <rect x="636" y="180" width="5" height="5" rx="1"/><rect x="636" y="196" width="5" height="5" rx="1"/>
+          </g>
+          <path d="M0 265c130-8 230-3 350 0s245 8 370 0v35H0Z" fill="#a9a9a9" opacity=".13"/>
+        </svg>
+      </div>
+      <div class="hero-brand">
+        <img class="hero-logo" src="acemode-logo.png" alt="AceMode Enterprises Kenya">
+        <p class="hero-slogan"><span>Innovate</span><i>|</i><span>Elevate</span><i>|</i><span>Dominate</span></p>
+        <a class="hero-banner-contact" href="https://wa.me/254729855092" target="_blank" rel="noopener" aria-label="Chat with AceMode Enterprises Kenya on WhatsApp at +254 729 855 092">
+          <span class="wa-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6-3.5-8.3ZM12.2 21.6h-.1c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 1 1 8.6 4.7Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.6s1.2 3 1.4 3.2c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.9.6.8.3 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+          </span>
+          +254 729 855 092
+        </a>
+      </div>
+    </div>
+
     <div class="hero-copy">
       <p class="eyebrow">
         <span class="dashmark sm" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -279,18 +362,16 @@ footer p:first-child{color:#d1d1d1}
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#contact">Get in Touch</a>
         <a class="btn btn-outline" href="https://wa.me/254729855092" target="_blank" rel="noopener">
-  <span class="wa-icon" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 3a8.5 8.5 0 0 0-7.35 12.75L3 21l5.4-1.62A8.5 8.5 0 1 0 12 3Z"/>
-      <path d="M8.6 8.75c.15-.45.5-.85.95-.85.28 0 .48.1.58.33l.58 1.3c.1.2.05.44-.1.6l-.48.52c-.15.16-.15.4-.05.6.4.72 1.1 1.44 1.82 1.83.2.1.44.1.6-.05l.5-.48c.16-.15.4-.2.6-.1l1.3.58c.23.1.33.3.33.58 0 .45-.4.8-.85.95-.58.15-1.25.05-2.25-.43-1.3-.62-2.44-1.78-3.07-3.06-.48-1-.58-1.68-.43-2.26Z" fill="currentColor" stroke="none"/>
-    </svg>
-  </span>
-  Contact Us on WhatsApp
-</a>
+          <span class="wa-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a8.5 8.5 0 0 0-7.35 12.75L3 21l5.4-1.62A8.5 8.5 0 1 0 12 3Z"/>
+              <path d="M8.6 8.75c.15-.45.5-.85.95-.85.28 0 .48.1.58.33l.58 1.3c.1.2.05.44-.1.6l-.48.52c-.15.16-.15.4-.05.6.4.72 1.1 1.44 1.82 1.83.2.1.44.1.6-.05l.5-.48c.16-.15.4-.2.6-.1l1.3.58c.23.1.33.3.33.58 0 .45-.4.8-.85.95-.58.15-1.25.05-2.25-.43-1.3-.62-2.44-1.78-3.07-3.06-.48-1-.58-1.68-.43-2.26Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          Contact Us on WhatsApp
+        </a>
       </div>
     </div>
-
-
   </div>
 </section>
 
